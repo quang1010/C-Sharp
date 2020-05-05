@@ -1,0 +1,74 @@
+using System;
+using System.Text;
+
+namespace baitap
+{
+    class b1
+    {
+        static void Main(string[] args)
+        {
+            int year;
+            bool isLeapYear = false;
+            Console.WriteLine("Enter a year: ");
+            year = Convert.ToInt32(Console.ReadLine());
+
+           
+            bool isDivisibleBy4 = year % 4 == 0;
+            if (isDivisibleBy4)
+            {
+                bool isDivisibleBy100 = year % 100 == 0;
+                if (isDivisibleBy100)
+                {
+                    bool isDivisibleBy400 = year % 400 == 0;
+                    if (isDivisibleBy400)
+                    {
+                        isLeapYear = true;
+                    }
+                }
+                else
+                {
+                    isLeapYear = true;
+                }
+            }
+
+            if (isLeapYear)
+            {
+                Console.WriteLine("{0} is a leap year", year);
+            }
+            else
+            {
+                Console.WriteLine("{0} is NOT a leap year", year);
+            }
+
+            /*Console.OutputEncoding = Encoding.Unicode;
+            Console.InputEncoding = Encoding.Unicode;
+            Console.Write("nhập năm:");
+            int year = int.Parse(Console.ReadLine());
+            if (year % 4 == 0 && year % 100 != 0)
+            {
+                Console.Write("là năm nhuận");
+            }
+            else if (year % 100 == 0 && year % 400 != 0)
+            {
+                Console.Write("không phải là năm nhuận");
+            }
+            else if (year % 100 == 0 && year % 400 == 0)
+            {
+                Console.Write("là năm nhuận");
+
+            }
+            else
+                Console.Write("không phải là năm nhuận");
+            Console.ReadKey(true);*/
+
+
+           
+
+
+
+
+
+        }
+
+    }
+}
