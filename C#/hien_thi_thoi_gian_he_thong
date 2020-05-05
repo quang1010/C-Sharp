@@ -1,0 +1,19 @@
+using System;
+using System.Text;
+using System.Collections.Generic;
+using System.Transactions;
+
+namespace baitap
+{
+    class hien_thi_thoi_gian_he_thong
+
+    {
+        static void Main(string[] args)
+        {
+
+            DateTime localdate = DateTime.Now;
+            Console.Write($"Datetime Now is :{localdate}");
+
+        }
+    }
+}
