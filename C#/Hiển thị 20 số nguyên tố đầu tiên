@@ -1,0 +1,62 @@
+using System;
+using System.Runtime.Serialization;
+using System.Text;
+using System.Threading;
+
+namespace baitap
+{
+    class b1
+    {
+        static void Main(string[] args)
+        {
+            
+         
+            Console.Write("Enter the number:");//enter 20
+            
+                                    
+            int number = int.Parse(Console.ReadLine());
+
+            int count = 0;
+            for (int i = 1; count != number; i++)
+            {
+                b1 n = new b1();
+                if (n.kt(i))
+                {
+                    count += 1;
+                    Console.WriteLine(i);
+                }
+                
+                       
+            }
+            Console.ReadKey();
+
+
+        }
+        public bool kt(int a)
+        {
+            bool check = true;
+
+            if (a < 2)
+                check = false;
+
+            else
+            {
+                int i = 2;
+
+                while (i <= Math.Sqrt(a))
+                {
+                    if (a % i == 0)
+                    {
+                        check = false;
+                        break;
+                    }
+                    i++;
+                }
+
+
+            }
+            return check;
+
+        }
+    }
+}
