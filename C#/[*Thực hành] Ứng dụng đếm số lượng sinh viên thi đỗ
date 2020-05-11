@@ -1,0 +1,38 @@
+using System;
+using System.Drawing;
+using System.Threading;
+
+namespace baitap
+{
+    class b1
+    {
+        static void Main(string[] args)
+        {
+            byte size;
+            byte count = 0;
+            do
+            {
+                Console.Write("nhap size:");
+                size = Byte.Parse(Console.ReadLine());
+                if (size > 30)
+                    Console.WriteLine("Size shound not exceed 30");
+            } while (size > 30);
+            int[] array = new int[size];
+            for(byte i=0; i < size; i++)
+            {
+                Console.Write("nhap phan tu mang array"+"["+i+']'+'=');
+                array[i]= Int32.Parse(Console.ReadLine());
+                if (array[i] > 5)
+                    count += 1;
+            }
+           
+            Console.WriteLine(count);
+
+            
+
+
+
+        }
+    }
+}
+
