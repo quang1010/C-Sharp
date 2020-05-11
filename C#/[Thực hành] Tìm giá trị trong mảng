@@ -1,0 +1,27 @@
+using System;
+
+namespace baitap
+
+{
+    class b1
+    {
+        static void Main(string[] args)
+        {
+            string[] student = { "Christian", "Michael", "Camila", "Sienna", "Tanya", "Connor", "Zachariah", "Mallory", "Zoe", "Emily" };
+            Console.WriteLine("nhap");
+            string a = Console.ReadLine();
+            byte count = 0;
+            for(byte i = 0; i < student.Length; i++)
+            {
+                if (a == student[i])
+                {
+                    Console.Write(i);
+                    count = 1;
+
+                }
+            }
+            if (count == 0)
+                Console.Write("Not found");
+        }
+    }
+}
