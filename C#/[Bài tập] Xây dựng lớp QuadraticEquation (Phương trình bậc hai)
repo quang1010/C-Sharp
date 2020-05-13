@@ -1,0 +1,73 @@
+
+
+using System;
+
+namespace baitap
+{
+    
+    class b1
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("a=:");
+            double a = Double.Parse(Console.ReadLine());
+            Console.Write("b=:");
+            double b = Double.Parse(Console.ReadLine());
+            Console.Write("c=:");
+            double c = Double.Parse(Console.ReadLine());
+
+            QuadraticEquation q = new QuadraticEquation(a, b, c);
+            if (q.GetDiscriminant() <0)
+            {
+                Console.WriteLine("The equation has no roots");
+            }
+            if (q.GetDiscriminant() == 0)
+            {
+                Console.WriteLine(q.GetRoot1());
+            }
+            if (q.GetDiscriminant() >0)
+            {
+                Console.WriteLine(q.GetRoot1()+" & "+q.GetRoot2());
+            }
+          
+
+        }
+    }
+    public class QuadraticEquation
+    {
+        private double a, b, c;
+        public QuadraticEquation(double A, double B, double C)
+        {
+            this.a = A;
+            this.b = B;
+            this.c = C;
+
+        }
+        public double getA()
+        {
+            return a;
+        }
+        public double getB()
+        {
+            return b;
+
+        }
+        public double getC()
+        {
+            return c;
+        }
+        public double GetDiscriminant()
+        {
+            return b * b - 4 * a * c;
+        }
+        public double GetRoot1()
+        {
+            return (-b + Math.Pow(b * b - 4 * a * c, 0.5)) / 2 * a;
+        }
+        public double GetRoot2()
+        {
+            return (-b - Math.Pow(b * b - 4 * a * c, 0.5)) / 2 * a;
+        }
+
+    }
+}
